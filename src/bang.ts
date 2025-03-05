@@ -2,10 +2,10 @@
 
 export const bangs = [
   {
-    c: "Mullvad Leta",
+    c: "Search",
     d: "leta.mullvad.net",
     r: 463021,
-    s: "Leta",
+    s: "Mullvad Leta",
     sc: "Search",
     t: "leta",
     u: "https://leta.mullvad.net/?q={{{s}}}",
