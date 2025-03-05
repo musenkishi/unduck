@@ -31,6 +31,10 @@ body {
   width: 100%;
 }
 
+html {
+  background-color: #fff; /* Use your desired light mode background */
+}
+
 body {
   line-height: 1.5;
   font-weight: 400;
@@ -160,12 +164,16 @@ textarea {
 }
 
 @media (prefers-color-scheme: dark) {
+  html {
+    background-color: #131313;
+  }
+
   body {
     color: #ddd;
   }
 
   #app {
-    background-color: #131313;
+    background-color: transparent; /* Remove background if not needed */
   }
 
   a {
