@@ -15,13 +15,13 @@ RUN npm install -g pnpm@10
 WORKDIR /usr/src/app
 
 # Copy package.json and pnpm-lock.yaml to leverage Docker cache
-COPY package.json pnpm-lock.yaml ./
+COPY ../package.json ../pnpm-lock.yaml ./
 
 # Install dependencies (including devDependencies)
 RUN pnpm install --frozen-lockfile
 
 # Copy the rest of the source code
-COPY . .
+COPY .. .
 
 # Build the application
 RUN pnpm run build
@@ -62,7 +62,7 @@ COPY --from=builder /usr/src/app/dist /usr/src/app/dist
 COPY --from=caddy_setup /usr/local/bin/caddy /usr/local/bin/caddy
 
 # Copy Caddyfile
-COPY Caddyfile /etc/caddy/Caddyfile
+COPY /docker/Caddyfile /etc/caddy/Caddyfile
 
 # Expose port 80
 EXPOSE 80
