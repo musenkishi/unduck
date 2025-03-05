@@ -2,6 +2,24 @@
 
 export const bangs = [
   {
+    c: "Settings",
+    d: "snabb.musen.dev",
+    r: 463021,
+    s: "Snabb Start Page",
+    sc: "Search",
+    t: "snabb",
+    u: "https://snabb.musen.dev",
+  },
+  {
+    c: "Search",
+    d: "leta.mullvad.net",
+    r: 463021,
+    s: "Mullvad Leta",
+    sc: "Search",
+    t: "leta",
+    u: "https://leta.mullvad.net/?q={{{s}}}",
+  },
+  {
     c: "AI",
     d: "www.t3.chat",
     r: 0,
