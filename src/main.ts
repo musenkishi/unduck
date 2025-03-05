@@ -22,11 +22,11 @@ function noSearchDefaultPageRender() {
             <img src="/clipboard.svg" alt="Copy" />
           </button>
         </div>
-        <div class="url-container">
-          <label for="default-engine">Default Search Engine:</label>
+        <div class="default-engine-container">
+          <label for="default-engine">Select default search engine:</label>
           <input list="bangs-list" id="default-engine" class="default-engine-input" />
           <datalist id="bangs-list">
-            ${bangs.map(bang => `<option value="${bang.s} (!${bang.t})" data-value="${bang.t}"></option>`).join('')}
+            ${bangs.map(bang => `<option value="[ !${bang.t} ] ${bang.s}" data-value="${bang.t}"></option>`).join('')}
           </datalist>
         </div>
       </div>
@@ -36,7 +36,7 @@ function noSearchDefaultPageRender() {
         <a href="https://bsky.app/profile/musen.dev" target="_blank">@musen.dev</a>
         •
         <a href="https://github.com/musenkishi/unduck" target="_blank">github</a>
-        <p>*This is a fork of Theo's <a href="https://github.com/t3dotgg/unduck" target="_blank">Und*ck</a>. Instead of defaulting to Google, it defaults to Mullvad's <a href="https://leta.mullvad.net/faq" target="_blank">Leta</a>, an anonymized search proxy.</p>
+        <p class="footer-footnote">*This is a fork of Theo's <a href="https://github.com/t3dotgg/unduck" target="_blank">Und*ck</a>. Adding more features e.g. it defaults to Mullvad's <a href="https://leta.mullvad.net/faq" target="_blank">Leta</a>, an anonymized search proxy, instead of plain Google.</p>
       </footer>
     </div>
   `;
@@ -48,7 +48,7 @@ function noSearchDefaultPageRender() {
 
   // Set the default value of the input field
   if (defaultBang) {
-    defaultEngineInput.value = defaultBang.t;
+    defaultEngineInput.value = `[ !${defaultBang.t} ] ${defaultBang.s}`;
   }
 
   copyButton.addEventListener("click", async () => {
