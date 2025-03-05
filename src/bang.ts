@@ -2,6 +2,15 @@
 
 export const bangs = [
   {
+    c: "Mullvad Leta",
+    d: "leta.mullvad.net",
+    r: 463021,
+    s: "Leta",
+    sc: "Search",
+    t: "leta",
+    u: "https://leta.mullvad.net/?q={{{s}}}",
+  },
+  {
     c: "AI",
     d: "www.t3.chat",
     r: 0,
