@@ -22,11 +22,11 @@ function noSearchDefaultPageRender() {
             <img src="/clipboard.svg" alt="Copy" />
           </button>
         </div>
-        <div class="default-engine-container">
+        <div class="url-container">
           <label for="default-engine">Default Search Engine:</label>
           <input list="bangs-list" id="default-engine" class="default-engine-input" />
           <datalist id="bangs-list">
-            ${bangs.map(bang => `<option value="${bang.s} (${bang.t})" data-value="${bang.t}"></option>`).join('')}
+            ${bangs.map(bang => `<option value="${bang.s} (!${bang.t})" data-value="${bang.t}"></option>`).join('')}
           </datalist>
         </div>
       </div>
