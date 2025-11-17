@@ -3,7 +3,7 @@ import "./global.css";
 
 function noSearchDefaultPageRender() {
   const app = document.querySelector<HTMLDivElement>("#app")!;
-  const LS_DEFAULT_BANG = localStorage.getItem("default-bang") ?? "leta";
+  const LS_DEFAULT_BANG = localStorage.getItem("default-bang") ?? "qwant";
   const defaultBang = bangs.find((b) => b.t === LS_DEFAULT_BANG);
 
   app.innerHTML = `
@@ -36,7 +36,7 @@ function noSearchDefaultPageRender() {
         <a href="https://bsky.app/profile/musen.dev" target="_blank">@musen.dev</a>
         •
         <a href="https://github.com/musenkishi/unduck" target="_blank">github</a>
-        <p class="footer-footnote">*This is a fork of Theo's <a href="https://github.com/t3dotgg/unduck" target="_blank">Und*ck</a>. Adding more features e.g. it defaults to Mullvad's <a href="https://leta.mullvad.net/faq" target="_blank">Leta</a>, an anonymized search proxy, instead of plain Google.</p>
+        <p class="footer-footnote">*This is a fork of Theo's <a href="https://github.com/t3dotgg/unduck" target="_blank">Und*ck</a>. Defaulint to Qwant for search engine instead of plain Google.</p>
       </footer>
     </div>
   `;
@@ -69,7 +69,7 @@ function noSearchDefaultPageRender() {
   });
 }
 
-const LS_DEFAULT_BANG = localStorage.getItem("default-bang") ?? "leta";
+const LS_DEFAULT_BANG = localStorage.getItem("default-bang") ?? "qwant";
 const defaultBang = bangs.find((b) => b.t === LS_DEFAULT_BANG);
 
 function getBangredirectUrl() {

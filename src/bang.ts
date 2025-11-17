@@ -11,15 +11,6 @@ export const bangs = [
     u: "https://snabb.musen.dev",
   },
   {
-    c: "Search",
-    d: "leta.mullvad.net",
-    r: 463021,
-    s: "Mullvad Leta",
-    sc: "Search",
-    t: "leta",
-    u: "https://leta.mullvad.net/?q={{{s}}}",
-  },
-  {
     c: "AI",
     d: "www.t3.chat",
     r: 0,
