@@ -36,7 +36,7 @@ function noSearchDefaultPageRender() {
         <a href="https://bsky.app/profile/musen.dev" target="_blank">@musen.dev</a>
         •
         <a href="https://github.com/musenkishi/unduck" target="_blank">github</a>
-        <p class="footer-footnote">*This is a fork of Theo's <a href="https://github.com/t3dotgg/unduck" target="_blank">Und*ck</a>. Defaulint to Qwant for search engine instead of plain Google.</p>
+        <p class="footer-footnote">*This is a fork of Theo's <a href="https://github.com/t3dotgg/unduck" target="_blank">Und*ck</a>. Defaults to Qwant for search engine instead of plain Google.</p>
       </footer>
     </div>
   `;
